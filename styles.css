@@ -1,0 +1,281 @@
+/* Your existing CSS styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 8px 20px;
+  }
+  
+  .filter-btn {
+    margin-right: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+  }
+  
+  .navbar {
+    background-color: #343a40;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #f8f9fa !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #dee2e6 !important;
+  }
+  
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .theme-toggle-checkbox {
+    display: none;
+  }
+  
+  .theme-toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .theme-toggle-label i {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+  }
+  
+  .theme-toggle-label .fa-sun {
+    color: #f39c12;
+  }
+  
+  .theme-toggle-label .fa-moon {
+    color: #f1c40f;
+    transform: translateY(-100%);
+  }
+  
+  .theme-toggle-checkbox:checked + .theme-toggle-label .fa-sun {
+    transform: translateY(100%);
+  }
+  
+  .theme-toggle-checkbox:checked + .theme-toggle-label .fa-moon {
+    transform: translateY(0%);
+  }
+  
+  .theme-toggle-ball {
+    width: 20px;
+    height: 20px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transition: transform 0.3s;
+    transform: translateX(0%);
+  }
+  
+  .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
+    transform: translateX(100%);
+  }
+  
+ /* Gallery item styles */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure images fill their containers without distortion */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Scale images on hover for a subtle effect */
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Modal styles */
+  .modal-content {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .modal-body {
+    padding: 0;
+  }
+  
+  /* Ensure lightbox image scales appropriately */
+  #lightboxImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 576px) {
+    .theme-toggle {
+      margin-left: 10px;
+    }
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #343a40;
+  }
+  
+  body.dark-mode .navbar .btn-outline-secondary {
+    border-color: #f8f9fa;
+    color: #f8f9fa;
+  }
+  
+  body.dark-mode .navbar .btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+    color: #343a40;
+  }
+  
+  body.dark-mode .btn-group .btn {
+    background-color: #495057;
+    border-color: #495057;
+  }
+  
+  body.dark-mode .btn-group .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  /* Theme Toggle Styles */
+  .theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-toggle-checkbox {
+    display: none;
+  }
+  
+  .theme-toggle-label {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+  }
+  
+  .theme-toggle-label .fas {
+    font-size: 16px;
+    transition: opacity 0.3s;
+  }
+  
+  .theme-toggle-checkbox:checked + .theme-toggle-label .fas.fa-sun {
+    opacity: 0;
+  }
+  
+  .theme-toggle-checkbox:checked + .theme-toggle-label .fas.fa-moon {
+    opacity: 1;
+  }
+  
+  .theme-toggle-label .theme-toggle-ball {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
+    transform: translateX(26px);
+    background-color: #212529;
+  }
+  
