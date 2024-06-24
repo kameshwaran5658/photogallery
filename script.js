@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const downloadButton = document.getElementById('downloadButton');
   
     const images = [
-      { src: '/images/n1.jpg', category: 'nature' },
-      { src: '/images/n2.jpg', category: 'nature' },
-      { src: '/images/n3.jpg', category: 'nature' },
-      { src: '/images/c1.jpg', category: 'city' },
-      { src: '/images/c2.jpg', category: 'city' },
-      { src: '/images/c3.jpg', category: 'city' },
-      { src: '/images/p1.jpg', category: 'people' },
-      { src: '/images/p2.jpg', category: 'people' },
-      { src: '/images/p3.jpg', category: 'people' }
+      { src: 'n1.jpg', category: 'nature' },
+      { src: 'n2.jpg', category: 'nature' },
+      { src: 'n3.jpg', category: 'nature' },
+      { src: 'c1.jpg', category: 'city' },
+      { src: 'c2.jpg', category: 'city' },
+      { src: 'c3.jpg', category: 'city' },
+      { src: 'p1.jpg', category: 'people' },
+      { src: 'p2.jpg', category: 'people' },
+      { src: 'p3.jpg', category: 'people' }
       // Add more images as needed
     ];
   
