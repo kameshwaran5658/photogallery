@@ -1,4 +1,4 @@
-/* Your existing CSS styles */
+/* General Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,12 +7,13 @@
   
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background: white;
     color: #212529;
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
   }
   
+  /* Links */
   a {
     color: inherit;
     text-decoration: none;
@@ -22,11 +23,13 @@
     text-decoration: none;
   }
   
+  /* Container */
   .container {
     max-width: 1140px;
     margin: 0 auto;
   }
   
+  /* Buttons */
   .btn {
     border-radius: 30px;
     font-weight: 500;
@@ -57,6 +60,7 @@
     border-color: #5a6268;
   }
   
+  /* Navbar */
   .navbar {
     background-color: #343a40;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -74,7 +78,9 @@
   }
   
   .navbar-toggler-icon {
-    background-color: #f8f9fa;
+    color: white;
+    border-radius: 2px;
+    background-color: #007bff;
   }
   
   .navbar-nav .nav-link {
@@ -88,62 +94,8 @@
     color: #dee2e6 !important;
   }
   
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .theme-toggle-checkbox {
-    display: none;
-  }
-  
-  .theme-toggle-label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .theme-toggle-label i {
-    font-size: 1.5rem;
-    transition: transform 0.3s;
-  }
-  
-  .theme-toggle-label .fa-sun {
-    color: #f39c12;
-  }
-  
-  .theme-toggle-label .fa-moon {
-    color: #f1c40f;
-    transform: translateY(-100%);
-  }
-  
-  .theme-toggle-checkbox:checked + .theme-toggle-label .fa-sun {
-    transform: translateY(100%);
-  }
-  
-  .theme-toggle-checkbox:checked + .theme-toggle-label .fa-moon {
-    transform: translateY(0%);
-  }
-  
-  .theme-toggle-ball {
-    width: 20px;
-    height: 20px;
-    background-color: #f8f9fa;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    transition: transform 0.3s;
-    transform: translateX(0%);
-  }
-  
-  .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
-    transform: translateX(100%);
-  }
-  
- /* Gallery item styles */
-.gallery-item {
+  /* Gallery */
+  .gallery-item {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
@@ -151,7 +103,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Ensure images fill their containers without distortion */
   .gallery-item img {
     width: 100%;
     height: 100%;
@@ -159,12 +110,11 @@
     transition: transform 0.3s ease;
   }
   
-  /* Scale images on hover for a subtle effect */
   .gallery-item:hover img {
     transform: scale(1.05);
   }
   
-  /* Modal styles */
+  /* Modal */
   .modal-content {
     background-color: transparent;
     border: none;
@@ -174,20 +124,12 @@
     padding: 0;
   }
   
-  /* Ensure lightbox image scales appropriately */
   #lightboxImage {
     width: 100%;
     height: auto;
   }
   
-  /* Responsive Design */
-  @media (max-width: 576px) {
-    .theme-toggle {
-      margin-left: 10px;
-    }
-  }
-  
-  /* Dark Mode Styles */
+  /* Dark Mode */
   body.dark-mode {
     background-color: #212529;
     color: #f8f9fa;
@@ -217,18 +159,13 @@
     border-color: #007bff;
   }
   
-  /* Theme Toggle Styles */
+  /* Theme Toggle (Merged CSS) */
   .theme-toggle {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  .toggle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 10px;
   }
   
   .theme-toggle-checkbox {
@@ -237,10 +174,10 @@
   
   .theme-toggle-label {
     position: relative;
-    display: block;
     width: 60px;
     height: 34px;
     background-color: #ccc;
+    color: #007bff;
     border-radius: 34px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -269,7 +206,7 @@
     left: 2px;
     width: 30px;
     height: 30px;
-    background-color: #fff;
+background-color: #495057   ;
     border-radius: 50%;
     transition: transform 0.3s, background-color 0.3s;
   }
@@ -277,5 +214,17 @@
   .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
     transform: translateX(26px);
     background-color: #212529;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 576px) {
+    .theme-toggle {
+      margin-left: 10px;
+    }
+    .navbar-toggler-icon{
+        color: white;
+        border-radius: 2px;
+        background-color: #007bff;
+    }
   }
   
